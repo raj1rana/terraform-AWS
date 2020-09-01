@@ -22,7 +22,7 @@ variable "PATH_TO_PRIVATE_KEY" {
 }
 
 variable "PATH_TO_PUBLIC_KEY" {
-  default = "/keypairs/automation.pub"
+  default = "keypairs/automation.pub"
 }
 
 variable "INSTANCE_USERNAME" {
