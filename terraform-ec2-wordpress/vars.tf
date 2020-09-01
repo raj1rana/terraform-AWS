@@ -18,11 +18,11 @@ variable AMIS {
   
 }
 variable "PATH_TO_PRIVATE_KEY" {
-  default = "automation"
+  default = "keypairs/automation"
 }
 
 variable "PATH_TO_PUBLIC_KEY" {
-  default = "automation.pub"
+  default = "/keypairs/automation.pub"
 }
 
 variable "INSTANCE_USERNAME" {
