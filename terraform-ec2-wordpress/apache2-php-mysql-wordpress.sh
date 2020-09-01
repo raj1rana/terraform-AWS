@@ -21,14 +21,25 @@ SITE_USER="test"
 SITE_WORKING_DIR="/home/test/"
 
 
+
+##############################  Install apache ########################
+sudo apt-get update
+sudo apt-get upgrade -y
+sudo apt-get install apache2 -y
+
 ############################### Install php #############################
-sudo apt-get install python-software-properties -y
-sudo add-apt-repository ppa:ondrej/php -y
-sudo apt-get update -y
+ sudo apt-get install python-software-properties -y
+    sudo add-apt-repository ppa:ondrej/php -y
+    sudo apt-get update -y
 sudo apt-get install -y $PHP_VERSION
 sudo apt-get install -y $PHP_VERSION-mysql
 
-
+################################  Install and configure Mysql #############
+sudo apt-get install mysql-server -y
+#  sudo mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '$MYSQL_ROOT_PASSWORD';"
+#  sudo mysql -e "flush privileges; "
+#  sudo mysql -e "exit"
+#  exit
 
  #############################   configure v-host for User #######################
  sudo adduser --disabled-password --gecos "" $SITE_USER

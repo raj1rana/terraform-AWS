@@ -20,15 +20,6 @@ resource "aws_instance" "automationn" {
     user        = var.INSTANCE_USERNAME
     private_key = file(var.PATH_TO_PRIVATE_KEY)
   }
-   provisioner "remote-exec" {
-    inline = [
-      "sudo apt-get update",
-      "sudo apt-get upgrade -y",
-      "sudo apt-get install apache2 -y",
-      "sudo apt-get install mysql-server -y",
-      
-    ]
-  }
   provisioner "local-exec" {
     command = "ssh -i automaton ubuntu@${aws_instance.automationn.public_ip} && cd /tmp/"
   }

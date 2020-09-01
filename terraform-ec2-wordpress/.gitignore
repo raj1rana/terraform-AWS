@@ -1,1 +1,7 @@
 *.tfvars
+.terraform/*
+*.terraform.tfstate.lock.info
+.automation
+*.pub
+*.tfstate
+*.tfstate.*
